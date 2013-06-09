@@ -2,25 +2,25 @@
 margin: 0;
 padding: 0;
 }
-body{
+body {
 font-family: Helvetica,Arial,sans-serif;
-padding:10px;
+padding: 10px;
 }
-#photoNumThumbnail, #photoBulletThum {
+#photoNumThumbnail, #photoBulletThum, #photoGallerySideThumbnails {
 width: 890px;
 position: relative;
 background-color: #ccc;
 }
-#photoNumThumbnail ul ,#photoBulletThum  ul {
+#photoNumThumbnail ul ,#photoBulletThum  ul, #photoGallerySideThumbnails ul {
 position: relative;
 height: 500px;
 width: 100%;
 }
-#photoNumThumbnail li , #photoBulletThum  li {
+#photoNumThumbnail li , #photoBulletThum  li , #photoGallerySideThumbnails li {
 list-style-type: none;
 position: absolute;
 }
-#photoNumThumbnail img ,#photoBulletThum  img {
+#photoNumThumbnail img ,#photoBulletThum  img  , #photoGallerySideThumbnails img {
 display: none;
 border: 0;
 outline: none;
@@ -33,7 +33,7 @@ position: absolute;
 bottom: 5px;
 right: 5px;
 }
-#photoNumThumbnail .cButtons{
+#photoNumThumbnail .cButtons {
 float: right;
 }
 #photoNumThumbnail div.playBtn,
@@ -89,22 +89,126 @@ color: #000000;
 
 /* ---- Bullet Option --- */
 
-#photoBulletThum .cPanel {
+#photoBulletThum .cPanel, #photoGallerySideThumbnails .cPanel {
 bottom: 0;
 position: absolute;
 width: 100%;
 }
-#photoBulletThum .thumbnails {
-float: 100%;
+#photoBulletThum .thumbnails , #photoGallerySideThumbnails .thumbnails {
+width: 100%;
 text-align: center;
 }
-#photoBulletThum .thumbnails span {
+#photoBulletThum .thumbnails span,#photoGallerySideThumbnails .thumbnails span {
 color: #000000;
 font-family: Arial,Helvetica,sans-serif;
 font-size: 36px;
 font-weight: bold;
 margin-right: 10px;
 }
-#photoBulletThum .thumbnails span.current {
+#photoBulletThum .thumbnails span.current, #photoGallerySideThumbnails .thumbnails span.current {
 color: #990000;
+}
+
+/* ---- Side thumbnail Option --- */
+
+#photoGallerySideThumbnails .cPanel {
+position: absolute;
+top: 5px;
+height: 10px;
+left: 5px;
+}
+#photoGallerySideThumbnails .thumbnails {
+float: right;
+height: 8px;
+margin: 0;
+padding: 0;
+}
+#photoGallerySideThumbnails .thumbnails span {
+background-color: #707070;
+cursor: pointer;
+display: block;
+float: left;
+height: 8px;
+letter-spacing: 0;
+margin-right: 10px;
+text-align: center;
+width: 8px;
+}
+#photoGallerySideThumbnails .thumbnails span.current {
+background-color: #EB7515;
+}
+#photoGallerySideThumbnails div.playBtn, #photoGallerySideThumbnails div.prevBtn, #photoGallerySideThumbnails div.nextBtn {
+background-color: #707070;
+border: 4px solid #707070;
+cursor: pointer;
+display: block;
+float: left;
+height: 44px;
+opacity: 0.8;
+width: 44px;
+}
+#photoGallerySideThumbnails div.prevBtn span, #photoGallerySideThumbnails div.nextBtn span {
+display: block;
+height: 44px;
+width: 44px;
+}
+#photoGallerySideThumbnails div.prevBtn img, #photoGallerySideThumbnails div.nextBtn img {
+border: 0 none;
+display: none;
+float: left;
+height: 44px;
+width: 100px;
+}
+#photoGallerySideThumbnails div.playBtn {
+background: url(../images/galleryNavigation.png) no-repeat scroll -52px -37px #707070;
+left: 390px;
+position: absolute;
+top: 180px;
+}
+#photoGallerySideThumbnails div.prevBtn {
+background-color: #707070;
+border-left: 0 none;
+left: 0;
+position: absolute;
+top: 180px;
+}
+#photoGallerySideThumbnails div.prevBtn span {
+background: url(../images/galleryNavigation.png) no-repeat scroll 14px 11px transparent;
+float: left;
+}
+#photoGallerySideThumbnails div.prevBtn img {
+margin-left: 2px;
+}
+#photoGallerySideThumbnails div.nextBtn {
+background-color: #707070;
+border-right: 0 none;
+float: left;
+position: absolute;
+right: 0;
+top: 180px;
+}
+#photoGallerySideThumbnails div.nextBtn span {
+background: url(../images/galleryNavigation.png) no-repeat scroll -51px 12px transparent;
+float: right;
+}
+#photoGallerySideThumbnails div.nextBtn img {
+margin-right: 2px;
+}
+#photoGallerySideThumbnails div.pause {
+background: url(../images/galleryNavigation.png) no-repeat scroll 13px -37px #707070;
+left: 390px;
+position: absolute;
+top: 180px;
+}
+#photoGallerySideThumbnails .btnHover {
+background-color: #EB7515 !important;
+border-color: #EB7515 !important;
+width: 146px !important;
+}
+#photoGallerySideThumbnails div.playBtn.btnHover {
+width: 44px !important;
+}
+#photoGallerySideThumbnails .btnHover img {
+background-color: gray;
+display: block !important;
 }
