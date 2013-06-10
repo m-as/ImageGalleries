@@ -1,4 +1,4 @@
-ImageGalleries
+Image Galleries
 ==============
 
 Set of four jQuery based Photo Galleries:
