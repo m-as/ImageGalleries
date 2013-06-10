@@ -6,21 +6,21 @@ body {
 font-family: Helvetica,Arial,sans-serif;
 padding: 10px;
 }
-#photoNumThumbnail, #photoBulletThum, #photoGallerySideThumbnails {
+#photoNumThumbnail, #photoBulletThum, #photoGallerySideThumbnails, #photoGalleryThumbnails {
 width: 890px;
 position: relative;
 background-color: #ccc;
 }
-#photoNumThumbnail ul ,#photoBulletThum  ul, #photoGallerySideThumbnails ul {
+#photoNumThumbnail ul ,#photoBulletThum  ul, #photoGallerySideThumbnails ul, #photoGalleryThumbnails ul {
 position: relative;
 height: 500px;
 width: 100%;
 }
-#photoNumThumbnail li , #photoBulletThum  li , #photoGallerySideThumbnails li {
+#photoNumThumbnail li , #photoBulletThum  li , #photoGallerySideThumbnails li, #photoGalleryThumbnails li {
 list-style-type: none;
 position: absolute;
 }
-#photoNumThumbnail img ,#photoBulletThum  img  , #photoGallerySideThumbnails img {
+#photoNumThumbnail img ,#photoBulletThum  img  , #photoGallerySideThumbnails img, #photoGalleryThumbnails img {
 display: none;
 border: 0;
 outline: none;
@@ -109,7 +109,37 @@ margin-right: 10px;
 color: #990000;
 }
 
-/* ---- Side thumbnail Option --- */
+/* ---- Thumbnails Option --- */
+
+#photoGalleryThumbnails .cPanel {
+position: absolute;
+bottom: 10px;
+left: 10px;
+}
+#photoGalleryThumbnails .thumbnails {
+float: left;
+}
+#photoGalleryThumbnails .thumbnails span {
+background-color: #cccccc;
+float: left;
+margin-right: 20px;
+position: relative;
+}
+#photoGalleryThumbnails .thumbnails span img {
+text-align: center;
+display: block;
+width: 124px;
+float: left;
+padding: 2px;
+cursor: pointer;
+}
+
+#photoGalleryThumbnails .thumbnails span.current {
+background-color: #EB7515;
+}
+
+
+/* ---- Sidebar Thumbnails Option --- */
 
 #photoGallerySideThumbnails .cPanel {
 position: absolute;

@@ -5,7 +5,6 @@
         <title>Gallery Sample</title>
         <meta name="description" content="Sample jQuery Gallery">
         <meta name="viewport" content="width=device-width">
-
         <link rel="stylesheet" href="css/gallery.css">
     </head>
     <body>
@@ -18,7 +17,7 @@
           <li class="bn2">
             <a target="_blank" href="#"><img alt="" src="images/tree2.jpg"></a>
           </li>
-          <li class="bn3" style="display: list-item;">
+          <li class="bn3">
             <a target="_blank" href="#"><img alt="" src="images/tree3.jpg"></a>
           </li>
           <li class="bn4">
@@ -35,10 +34,10 @@
       <h2> Photo Gallery with Photo Number Display</h2>
       <div id="photoNumThumbnail">
         <ul class="photoBanner">
-          <li class="bn2" style="display: list-item;">
+          <li class="bn2">
             <a target="_blank" href="#"><img alt="" src="images/tree2.jpg"></a>
           </li>
-          <li class="bn3" style="display: list-item;">
+          <li class="bn3">
             <a target="_blank" href="#"><img alt="" src="images/tree3.jpg"></a>
           </li>
           <li class="bn4">
@@ -52,13 +51,33 @@
       </div>
 
       <br>
-      <h2> Photo Gallery with Sidebar Thumbnail Navigation</h2>
-      <div id="photoGallerySideThumbnails">
+      <h2> Photo Gallery with Thumbnails Display</h2>
+      <div id="photoGalleryThumbnails">
         <ul class="photoBanner">
-          <li class="bn2" style="display: list-item;">
+          <li class="bn2">
             <a target="_blank" href="#"><img alt="" src="images/tree2.jpg"></a>
           </li>
-          <li class="bn3" style="display: list-item;">
+          <li class="bn3">
+            <a target="_blank" href="#"><img alt="" src="images/tree3.jpg"></a>
+          </li>
+          <li class="bn4">
+            <a target="_blank" href="#"><img alt="" src="images/tree4.jpg"></a>
+          </li>
+          <li class="bn1">
+            <a target="_blank" href="#"><img alt="" src="images/tree1.jpg"></a>
+          </li>
+        </ul>
+        <div class="cPanel"></div>
+      </div>
+
+      <br>
+      <h2> Photo Gallery with Sidebar Thumbnails Navigation</h2>
+      <div id="photoGallerySideThumbnails">
+        <ul class="photoBanner">
+          <li class="bn2">
+            <a target="_blank" href="#"><img alt="" src="images/tree2.jpg"></a>
+          </li>
+          <li class="bn3">
             <a target="_blank" href="#"><img alt="" src="images/tree3.jpg"></a>
           </li>
           <li class="bn4">
@@ -75,11 +94,13 @@
 
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
       <script src="photoGallery.js"></script>
+      <script src="photoGalleryThumbnails.js"></script>
       <script src="photoGallerySideThumbnails.js"></script>
 
       <script type="text/javascript">
         if ($('#photoNumThumbnail')) $('#photoNumThumbnail').photoGallery({num: true, controls: true });
         if ($('#photoBulletThum')) $('#photoBulletThum').photoGallery({bullet: true });
+        if ($('#photoGalleryThumbnails')) $('#photoGalleryThumbnails').photoGalleryThumbnails();
         if ($('#photoGallerySideThumbnails')) $('#photoGallerySideThumbnails').photoGallerySideThumbnails();
       </script>
 
